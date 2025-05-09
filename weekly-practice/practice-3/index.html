@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+  </head>
+  <body>
+    <button class="cheese" onclick="textPopUp()">button 1</button>
+    <button class="axolotl" onclick="textPopUp2()">button 2</button>
+    <button class="meanie" onclick="textPopUp3()">Change the Weather</button>
+    <div class="bored">Howdy, what a nice day</div>
+    <input class="food" type="number" min="0" max="10" />
+    <button class="pizza" onclick="checkResult()">check result</button>
+    <div class="pineapple">waiting for result</div>
+    <script>
+      function textPopUp() {
+        alert('hello world');
+      }
+      function textPopUp2() {
+        let button = document.querySelector('.axolotl');
+        let buttonText = button.innerHTML;
+        alert(buttonText);
+      }
+      function textPopUp3() {
+        let textPopUpButton = document.querySelector('.bored');
+        textPopUpButton.innerHTML = 'Oh my, what a rainy day!';
+      }
+
+      function checkResult() {
+        // step 1 - get the value
+        // - select the input and save it to a variable
+        // - get the input value
+        let input = document.querySelector('.food');
+        let inputValue = input.value;
+        let result = document.querySelector('.pineapple');
+        if (inputValue == 10) {
+          result.innerHTML = 'Fantastic! I have nothing else to teach you.';
+        } else if (inputValue >= 7 && inputValue <= 9) {
+          result.innerHTML = 'Great job, but you still have a long way to go.';
+        } else if (inputValue >= 4 && inputValue <= 6) {
+          result.innerHTML = 'Mate, try harder next time.';
+        } else if (inputValue >= 1 && inputValue <= 3) {
+          result.innerHTML =
+            'Our centre is open 24/7, the reception is over there.';
+        } else {
+          result.innerHTML = 'I give up';
+        }
+      }
+    </script>
+  </body>
+</html>

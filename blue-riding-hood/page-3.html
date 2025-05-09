@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue riding hood</title>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <style>
+      .container {
+        position: relative;
+      }
+      img {
+        width: 1000px;
+      }
+
+      .buttons img {
+        width: 50px;
+        animation: rainbow 3s linear infinite;
+      }
+      .buttons img:hover {
+        animation: heartbeat 0.5s ease-in-out 1s infinite;
+      }
+      .coffee {
+        position: absolute;
+        right: 550px;
+        bottom: 230px;
+      }
+      .band-aid {
+        position: absolute;
+        bottom: 320px;
+        left: 340px;
+      }
+      .weapon {
+        position: absolute;
+        bottom: 240px;
+        left: 280px;
+      }
+      .lantern {
+        position: absolute;
+        bottom: 190px;
+        right: 640px;
+      }
+      .camera {
+        position: absolute;
+        bottom: 250px;
+        right: 220px;
+      }
+      .freezer {
+        position: absolute;
+        bottom: 170px;
+        right: 220px;
+      }
+      @keyframes rainbow {
+        0% {
+          border-radius: 50px;
+          box-shadow: 0px 3px 10px pink;
+        }
+        25% {
+          box-shadow: 0px 3px 10px yellow;
+          border-radius: 50px;
+        }
+        50% {
+          box-shadow: 0px 3px 10px green;
+          border-radius: 50px;
+        }
+        75% {
+          box-shadow: 0px 3px 10px blue;
+          border-radius: 50px;
+        }
+        100% {
+          box-shadow: 0px 3px 10px purple;
+          border-radius: 50px;
+        }
+      }
+      .blue-riding-hood {
+        width: 150px;
+        position: absolute;
+        left: 100px;
+        bottom: 50px;
+        animation: left-right 5s forwards;
+      }
+      @keyframes left-right {
+        0% {
+          left: 0px;
+          bottom: 50px;
+        }
+        100% {
+          left: 350px;
+          bottom: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body class="indie-flower-regular">
+    <div class="container">
+      <div class="page page-3 tilt-in-fwd-tr">
+        <div>
+          <span class="blue"> Blue </span> Riding Hood has received a
+          hand-written letter explaining that her grandmother is ill!
+        </div>
+        <div class="text-bold">What gift should she take?</div>
+        <div>
+          <img
+            src="https://img.freepik.com/free-vector/living-room-interior-with-furniture-tv_107791-18728.jpg?&w=1380"
+          />
+          <img
+            class="blue-riding-hood"
+            src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/blueridinghood.png"
+          />
+        </div>
+        <div class="buttons">
+          <div class="coffee">
+            <a href="page-4.html">
+              <img
+                src="https://assets.learnosity.com/organisations/130/c725b75f-e31d-426b-a813-48fe350b5699.png"
+              />
+            </a>
+          </div>
+          <div class="band-aid">
+            <img
+              src="https://assets.learnosity.com/organisations/130/5f675491-368b-4d17-b774-0f427e70c1f0.png"
+            />
+          </div>
+          <div class="weapon">
+            <img
+              src="https://assets.learnosity.com/organisations/130/05326635-4696-4891-9940-3e14f6e905a4.png"
+            />
+          </div>
+          <div class="lantern">
+            <img
+              src="https://assets.learnosity.com/organisations/130/73ac8f4a-55b4-4e3d-a59d-d8d5d86561ba.png"
+            />
+          </div>
+          <div class="camera">
+            <img
+              src="https://assets.learnosity.com/organisations/130/d584437d-2927-4da9-b09c-c68ae4f2907a.png"
+            />
+          </div>
+          <div class="freezer">
+            <a href="page-4.html">
+              <img
+                src="https://assets.learnosity.com/organisations/130/44acaa25-b9aa-4986-bd92-d20b2e9b1d69.png"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

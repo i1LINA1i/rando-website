@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+      body {
+        display: flex;
+        background: url(https://img.freepik.com/free-photo/smooth-tan-smoke_23-2147734860.jpg?w=3000);
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        font-family: 'La Belle Aurore', cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .container {
+        position: relative;
+        background: url(https://cdn.hero.page/pfp/54899c9b-88db-42df-91e6-0ad43a25645c-depressed-anime-girl-in-the-rain-aesthetics-depressed-anime-girl-pfp-2.png);
+        width: 500px;
+        height: 500px;
+        background-size: cover;
+        box-shadow: 0 6px 10px black;
+        border: 20px solid white;
+      }
+      .writing {
+        position: absolute;
+        right: -2px;
+        bottom: 0;
+        width: 400px;
+        opacity: 0;
+        color: crimson;
+        text-align: center;
+        font-size: 50px;
+        line-height: 1.3;
+        text-shadow: 1px 2px rgba(0, 0, 0, 0.7);
+        animation: writing-ani 3s ease-in forwards 1s;
+      }
+      @keyframes writing-ani {
+        100% {
+          opacity: 1;
+          transform: rotate(-7deg);
+        }
+      }
+      .vertical-line {
+        width: 1px;
+        height: 500px;
+        background-color: white;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        animation: left-right 5s forwards;
+      }
+      @keyframes left-right {
+        0% {
+          width: 1px;
+          height: 500px;
+          left: 0px;
+          top: 0px;
+        }
+        100% {
+          width: 20px;
+          height: 500px;
+
+          left: 400px;
+          top: 0px;
+        }
+      }
+      .horizontal-line {
+        width: 1px;
+        height: 500px;
+        background-color: white;
+        position: absolute;
+        right: 250px;
+        top: -250px;
+        transform: rotate(-90deg);
+        animation: top-bottom 5s forwards;
+      }
+      @keyframes top-bottom {
+        0% {
+          width: 2px;
+          right: 250px;
+          top: -250px;
+          transform: rotate(-90deg);
+        }
+        100% {
+          width: 20px;
+          right: 240px;
+          top: 150px;
+          transform: rotate(-90deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="vertical-line"></div>
+      <div class="horizontal-line"></div>
+      <div class="writing">Tears are words the heart can't say</div>
+    </div>
+  </body>
+</html>

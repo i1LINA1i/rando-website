@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      .red {
+        color: red;
+      }
+      .orange {
+        color: orange;
+      }
+      .yellow {
+        color: yellow;
+      }
+      .green {
+        color: green;
+      }
+      .blue {
+        color: blue;
+      }
+      .purple {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        class="flower"
+        src="https://images.vexels.com/media/users/3/151219/isolated/preview/a6c6b31b6b08e078065836a761aa5f0d-simple-flower-colored-doodle.png"
+      />
+
+      <button onclick="changeImage()">switch image</button>
+    </div>
+    <div>
+      <ul class="list"></ul>
+      <input class="input" />
+      <button onclick="addList()">add to list</button>
+    </div>
+    <div>
+      <p class="item">hello</p>
+      <button onclick="hideOrShowImage()">hide/show</button>
+    </div>
+    <div class="text red" onclick="changeColour()">
+      colour
+      <button>change my colour</button>
+    </div>
+    <div>
+      <input type="number" /> <input type="number" /> <button>add</button>
+      <div></div>
+    </div>
+    <script>
+      function changeImage() {
+        let img = document.querySelector('.flower');
+        img.src =
+          'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHx8MA%3D%3D';
+      }
+      function addList() {
+        let input = document.querySelector('.input');
+        let inputValue = input.value;
+        let addList = document.querySelector('.list');
+        addList.innerHTML = `${addList.innerHTML}<li>${inputValue}</li>`;
+      }
+      function hideOrShowImage() {
+        let item = document.querySelector('.item');
+
+        if (item.classList.contains('hidden')) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      }
+      function changeColour() {
+        let text = document.querySelector('.text');
+        if (text.classList.contains('red')) {
+          text.classList.remove('red');
+          text.classList.add('orange');
+        } else if (text.classList.contains('orange')) {
+          text.classList.remove('orange');
+          text.classList.add('yellow');
+        } else if (text.classList.contains('yellow')) {
+          text.classList.remove('yellow');
+          text.classList.add('green');
+        } else if (text.classList.contains('green')) {
+          text.classList.remove('green');
+          text.classList.add('blue');
+        } else if (text.classList.contains('blue')) {
+          text.classList.remove('blue');
+          text.classList.add('purple');
+        } else {
+          text.classList.remove('purple');
+          text.classList.add('red');
+        }
+      }
+    </script>
+  </body>
+</html>

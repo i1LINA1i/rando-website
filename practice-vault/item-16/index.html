@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+      }
+      body {
+        margin: 0;
+      }
+      .red {
+        background-color: red;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .green {
+        background-color: green;
+      }
+      .indigo {
+        background-color: indigo;
+      }
+      .violet {
+        background-color: violet;
+      }
+      button {
+        padding: 10px 20px 10px 20px;
+        border-radius: 10px;
+        background-color: #333333;
+        border: none;
+        color: white;
+      }
+      button:hover {
+        transform: scale(1.2, 1.2);
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container red">
+      <button onclick="changeColor()">Change the Colour</button>
+    </div>
+    <script>
+      function changeColor() {
+        let myBackground = document.querySelector('.container');
+        if (myBackground.classList.contains('red')) {
+          myBackground.classList.remove('red');
+          myBackground.classList.add('orange');
+        } else if (myBackground.classList.contains('orange')) {
+          myBackground.classList.remove('orange');
+          myBackground.classList.add('yellow');
+        } else if (myBackground.classList.contains('yellow')) {
+          myBackground.classList.remove('yellow');
+          myBackground.classList.add('green');
+        } else if (myBackground.classList.contains('green')) {
+          myBackground.classList.remove('green');
+          myBackground.classList.add('indigo');
+        } else if (myBackground.classList.contains('indigo')) {
+          myBackground.classList.remove('indigo');
+          myBackground.classList.add('violet');
+        } else {
+          myBackground.classList.remove('violet');
+          myBackground.classList.add('red');
+        }
+      }
+    </script>
+  </body>
+</html>

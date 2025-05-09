@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week-11</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .header {
+        display: flex;
+        background-color: ;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+      }
+      .body {
+        flex: 1;
+        background-color: ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer {
+        background-color: blue;
+      }
+      body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .header-icon {
+        width: 36px;
+      }
+      .text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+      }
+      .logo {
+        text-align: center;
+        width: 300px;
+      }
+      .search img {
+        height: 30px;
+      }
+      .search-input {
+        height: 30px;
+        width: 500px;
+        border-radius: 15px;
+        border-color: white;
+      }
+      .search {
+        position: relative;
+      }
+      .search-left-section {
+        position: absolute;
+        top: 3px;
+        left: 20px;
+      }
+
+      .search-right-section {
+        position: absolute;
+        top: 3px;
+        right: 20px;
+      }
+      .controls {
+        display: flex;
+        gap: 12px;
+      }
+      .controls button {
+        border: none;
+        background-color: lightgray;
+        border-radius: 4px;
+        color: black;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 14px;
+        height: 36px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="text"><a> about </a> <a>store</a></div>
+        <div class="text">
+          <a>Gmail</a>
+          <a>Images</a>
+
+          <a>
+            <img
+              class="header-icon"
+              src="https://www.svgrepo.com/show/532198/list-ul-alt.svg"
+            />
+          </a>
+          <a>
+            <img
+              class="header-icon"
+              src="https://www.svgrepo.com/show/492689/avatar-boy.svg"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="body">
+        <div>
+          <img
+            class="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
+          />
+        </div>
+
+        <div class="search">
+          <input class="search-input" />
+
+          <div class="search-left-section">
+            <img src="https://www.svgrepo.com/show/532554/search-alt.svg" />
+          </div>
+
+          <div class="search-right-section">
+            <img src="https://www.svgrepo.com/show/528402/microphone.svg" />
+            <img
+              src="https://www.svgrepo.com/show/528090/camera-minimalistic.svg"
+            />
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="controls button">Google Search</button>
+          <button class="controls button">I'm Feeling Lucky</button>
+        </div>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>

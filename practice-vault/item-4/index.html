@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(https://img.freepik.com/free-photo/smooth-tan-smoke_23-2147734860.jpg?w=3000);
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Squada One', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #333;
+      }
+      .container {
+        display: flex;
+        background: url(https://w0.peakpx.com/wallpaper/872/421/HD-wallpaper-ocean-blue-dark-night-sea-thunder-wave.jpg);
+        width: 400px;
+        height: 650px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 6px 10px black;
+      }
+
+      .box {
+        position: relative;
+        width: 250px;
+        height: 250px;
+      }
+      .white {
+        animation: roatate 2s forwards;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 250px;
+        background-color: white;
+      }
+      .information {
+        display: flex;
+        position: absolute;
+        font-family: 'Squada One', sans-serif;
+        top: 90px;
+        left: 10px;
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+        width: 220px;
+        height: 80px;
+        background-color: white;
+        padding-top: 10px;
+      }
+      .line {
+        width: 2px;
+        height: 220px;
+        background-color: lightgray;
+        z-index: 1;
+        position: absolute;
+        left: 125px;
+        top: 25px;
+      }
+      .title {
+        font-size: 50px;
+      }
+      .content {
+        font-size: 12px;___
+      }
+      @keyframes roatate {
+        100% {
+          transform: rotate(45deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="information">
+          <div class="title">MILESTONE</div>
+          <div class="content">Where Progress Meets Achievement</div>
+        </div>
+        <div class="line"></div>
+        <div class="white"></div>
+      </div>
+    </div>
+  </body>
+</html>

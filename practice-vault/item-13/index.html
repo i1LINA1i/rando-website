@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        background: black;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      input {
+        height: 25px;
+        font-size: 30px;
+        width: 150px;
+        text-align: center;
+        border-radius: 0;
+        margin: 10px;
+      }
+      select {
+        font-size: 18px;
+      }
+
+      .button {
+        border-radius: 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 30px;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+      .equal-sign {
+        color: white;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input class="first-number" />
+      <select>
+        <option value="plus">plus</option>
+        <option value="minus">minus</option>
+        <option value="multiply">muliply</option>
+
+        <option value="divide">divide</option>
+      </select>
+      <input class="second-number" />
+      <div class="equal-sign">=</div>
+      <input class="third-number" readonly />
+
+      <button class="button" onclick="calculate()">calculate</button>
+    </div>
+    <script>
+      function calculate() {}
+    </script>
+  </body>
+</html>

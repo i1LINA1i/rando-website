@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>lina</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+      body {
+        font-size: 14px;
+        background-color: #0e0e0e;
+        color: #fff;
+        font-family: 'Orbitron', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        text-color: lightpink;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+      }
+      .logo img {
+        height: 60px;
+        border-radius: 59px;
+        border: solid;
+        border-color: lightpink;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+      }
+      .menu a {
+        color: lightpink;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      .menu .active {
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: lightpink;
+        border-radius: 4px;
+      }
+      .summary {
+        display: flex;
+        justify-content: space-evenly;
+        color: white;
+        margin-top: 50px;
+      }
+      .summary-item-title {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .summary-item-content {
+        display: flex;
+        gap: 30px;
+        text-align: center;
+      }
+      .summary-item-text {
+        color: lightpink;
+      }
+
+      .summary-item-number {
+        font-size: 35px;
+      }
+      .facts {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+      }
+      .cat {
+        flex: 1;
+        text-align: center;
+      }
+      .cat img {
+        width: 250px;
+      }
+      .title-facts {
+        font-size: 30px;
+        border-bottom: 5px solid lightpink;
+      }
+      .text-body {
+        flex: 1;
+      }
+      .info {
+        flex: 1;
+      }
+      .info li {
+        padding-top: 10px;
+      }
+      .container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .fav {
+        font-size: 30px;
+        border-bottom: 5px solid lightpink;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .vidoes {
+        display: flex;
+        gap: 50px;
+      }
+      .vidoes iframe {
+        height: 150px;
+        width: 250px;
+
+      }
+      .animated-rainbow {
+        animation: abc 1s infinite;
+      }
+
+
+      @keyframes abc {
+        0% {
+          box-shadow: 0 0 10px 2px pink; /* lightpink */
+        }
+
+        }
+        100% {
+          box-shadow: 0 0 10px 2px rgba(0,0.5); /* lightpink */
+        }
+        100% {
+          box-shadow:  100px 1000px rgba(0.5,1); /* white */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="location">Sydney, Au</div>
+        <div class="logo">
+          <img
+            src="https://t4.ftcdn.net/jpg/05/57/29/25/360_F_557292539_2kXYz0frOcCGISoYEd2MNTmxyT0lYyOj.jpg"
+          />
+          <div>lina sorn</div>
+        </div>
+        <div class="menu">
+          <a class="active">home</a>
+          <a>my games</a>
+          <a>my friends list</a>
+        </div>
+      </div>
+      <div class="summary">
+        <div class="summary-item">
+          <div class="summary-item-title">Watched</div>
+          <div class="summary-item-content">
+            <div>
+              <div class="summary-item-number">237</div>
+              <div class="summary-item-text">movies</div>
+            </div>
+            <div>
+              <div class="summary-item-number">23</div>
+              <div class="summary-item-text">series</div>
+            </div>
+            <div>
+              <div class="summary-item-number">05</div>
+              <div class="summary-item-text">docs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <div class="summary-item-title">Games Played</div>
+          <div class="summary-item-content">
+            <div>
+              <div class="summary-item-number">150</div>
+              <div class="summary-item-text">Action</div>
+            </div>
+            <div>
+              <div class="summary-item-number">45</div>
+              <div class="summary-item-text">RPG</div>
+            </div>
+            <div>
+              <div class="summary-item-number">02</div>
+              <div class="summary-item-text">FPS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <div class="summary-item-title">Time Spent Sleeping</div>
+          <div class="summary-item-content">
+            <div>
+              <div class="summary-item-number">04</div>
+              <div class="summary-item-text">Years</div>
+            </div>
+            <div>
+              <div class="summary-item-number">08</div>
+              <div class="summary-item-text">months</div>
+            </div>
+            <div>
+              <div class="summary-item-number">20</div>
+              <div class="summary-item-text">Days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="cat">
+          <img src="https://i.gifer.com/YAg6.gif" />
+        </div>
+        <div class="info">
+          <div class="title-facts">True Fact</div>
+          <div class="text-body">
+            <ul class="fact-info">
+              <li>Gymer by morning</li>
+              <li>Coder by day</li>
+              <li>Gamer by night</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="favourite">
+        <div class="fav">
+          <div>My Favourite Vidoes</div>
+        </div>
+        <div class="vidoes">
+          <div>
+            <iframe
+              class="animated-rainbow"
+              src="https://www.youtube.com/embed/Xt0ixGztN4g?si=ogM0E3GwVhfWWT07"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <iframe
+              class="animated-rainbow"
+              src="https://www.youtube.com/embed/KrsqPE9SMxo?si=HoDttBixTFL1wNqn"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <iframe
+              class="animated-rainbow"
+              src="https://www.youtube.com/embed/zU3N-SUgHvE?si=zdO5LhMFnjyvxQnq"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

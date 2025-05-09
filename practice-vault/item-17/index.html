@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #f8f8f8;
+      }
+      .container {
+        display: flex;
+        width: 370px;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .game-button {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        border: 5px gray solid;
+        background-color: lightgray;
+        font-size: 30px;
+        color: transparent;
+      }
+
+      .selected {
+        background-color: white;
+        color: crimson;
+      }
+      .matched {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="game-button item-1" onclick="selectItem('.item-1')">
+        a</button
+      ><button class="game-button item-2" onclick="selectItem('.item-2')">
+        b
+      </button>
+      <button class="game-button item-3" onclick="selectItem('.item-3')">
+        a
+      </button>
+      <button class="game-button item-4" onclick="selectItem('.item-4')">
+        c
+      </button>
+      <button class="game-button item-5" onclick="selectItem('.item-5')">
+        c
+      </button>
+      <button class="game-button item-6" onclick="selectItem('.item-6')">
+        b
+      </button>
+    </div>
+    <script>
+      let previousSelectedItem;
+
+      function selectItem(itemClassName) {
+        let selectedItem = document.querySelector(itemClassName);
+        selectedItem.classList.add('selected');
+
+        if (!previousSelectedItem) {
+          previousSelectedItem = selectedItem;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        position: relative;
+        margin-top: 100px;
+        width: 500px;
+        height: 450px;
+        border: 2px solid;
+        border-color: grey;
+      }
+
+      @keyframes left-right {
+        0% {
+          left: -5px;
+        }
+        100% {
+          left: 500px;
+          background-color: pink;
+        }
+      }
+
+      .red {
+        position: absolute;
+        top: 200px;
+        left: -5px;
+        background-color: red;
+        width: 60px;
+        height: 60px;
+        animation: left-right 3s linear infinite;
+      }
+      @keyframes top-bottom {
+        0% {
+          top: 1px;
+          right: 230px;
+          background-color: blue;
+          width: 60px;
+          height: 60px;
+          transform: rotate(0deg);
+        }
+        50% {
+          top: 500px;
+          background-color: purple;
+          width: 100px;
+          height: 100px;
+        }
+        100% {
+          top: 1px;
+          transform: rotate(360deg);
+        }
+      }
+      .blue {
+        position: absolute;
+        top: 1px;
+        right: 230px;
+        background-color: blue;
+        width: 60px;
+        height: 60px;
+        animation: top-bottom 3s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="red"></div>
+      <div class="blue"></div>
+    </div>
+  </body>
+</html>

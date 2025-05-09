@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue riding hood</title>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <style>
+      .sections {
+        display: flex;
+        gap: 20px;
+      }
+
+      .section:hover {
+        animation: 1s scale-up-center forwards;
+        z-index: 1;
+      }
+
+      .section {
+        flex: 1;
+        position: relative;
+      }
+
+      .section img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        animation: 5s rainbow infinite;
+        
+      }
+
+      .p1 {
+        font-size: 17px;
+        padding: 20px;
+      }
+      .p2 {
+        text-align: center;
+        font-size: 25px;
+        padding-bottom: 15px;
+      }
+
+      .box {
+        position: absolute;
+        display: flex;
+        top: 40%;
+        left: 25px;
+        right: 25px;
+        height: 100px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        border-radius: 10px;
+        font-size: 25px;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .girl img {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        z-index: 3;
+        left: 500px;
+        bottom: -170px;
+        animation: 2s bottom-top forwards;
+      }
+      @keyframes bottom-top {
+        0% {
+          left: 530px;
+          bottom: -170px;
+        }
+        100% {
+          left: 530px;
+          bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body class="indie-flower-regular">
+    <div class="container">
+      <div class="page page-4 tilt-in-fwd-tr">
+        <div class="content">
+          <div class="p1">
+            <span class="blue">Blue</span> Riding Hood leaves home with her
+            basket and arrives at a crossroad.
+          </div>
+          <div class="text-bold p2">Which road will she take?</div>
+        </div>
+        <div class="sections">
+          <div class="section">
+            <img
+              src="https://img.freepik.com/free-vector/beautiful-landscape-nature-with-flat-illustration-valley-spruce-forest-nature-tourism-landscape-travel-mountains-adventure-concept_1150-37321.jpg"
+            />
+
+            <div class="box lobster-regular">The Fun Looooong Road</div>
+          </div>
+          <div class="section">
+            <img
+              src="https://img.freepik.com/free-vector/forest-scene-with-various-forest-trees_1308-61222.jpg"
+            />
+            <div class="box lobster-regular">The Boring Sneaky Shortcut</div>
+          </div>
+        </div>
+      </div>
+      <div class="girl">
+        <img
+          src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/blueridinghood.png"
+        />
+      </div>
+    </div>
+  </body>
+</html>

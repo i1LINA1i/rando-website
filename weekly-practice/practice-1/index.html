@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .pinapple {
+        width: 100px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="pinapple" onclick="mathResult()">1+1</button>
+
+    <div class="batminton">Empty</div>
+
+    <button class="icecream"></button>
+
+    <script>
+      function mathResult() {
+        let mathResultbutton = document.querySelector('.batminton');
+        mathResultbutton.innerHTML = 'The result of 1+1=2';
+      }
+    </script>
+  </body>
+</html>

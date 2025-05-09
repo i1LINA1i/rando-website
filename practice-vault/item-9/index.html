@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 300px;
+      }
+
+      .simple {
+        width: 250px;
+        height: 50px;
+        flex: 1;
+        font-size: 20px;
+        color: white;
+        border: none;
+        background-color: #aaaaaa;
+        border-radius: 5px;
+      }
+      .fancy {
+        width: 180px;
+        height: 50px;
+        flex: 1;
+        margin-left: 5px;
+        font-size: 20px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+      }
+      .section-2 {
+        display: flex;
+      }
+      .name {
+        font-size: 40px;
+        color: crimson;
+      }
+      .age {
+        color: #bbb;
+        border-bottom: solid #bbb 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <h1 class="title">Hello..</h1>
+        <div class="section-2">
+          <button onclick="simpleIntro()" class="simple">
+            Simple Introduction
+          </button>
+          <button onclick="fancyIntro()" class="fancy">
+            Fancy Introduction
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function simpleIntro() {
+        let simpleMessage = 'Hello, I am Sahlina, I am 12 years old';
+
+        document.querySelector('.title').innerHTML = simpleMessage;
+      }
+      function fancyIntro() {
+        let fancyMessage =
+          'Hello, I am <span class="name"> Sahlina</span>, I am <span class= "age"> 12 years old </span>';
+
+        document.querySelector('.title').innerHTML = fancyMessage;
+      }
+    </script>
+  </body>
+</html>

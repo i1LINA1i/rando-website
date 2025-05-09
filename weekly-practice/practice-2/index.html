@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+  </head>
+  <body>
+    <button class="meow" onclick="popUpHello()">button</button>
+    <button class="kitty" onclick="popupNewMessage('My name is abc')">
+      MY NAME
+    </button>
+    <button class="moo" onclick="contentDiv()">Change the div content</button>
+    <div class="cow">empty</div>
+    <input class="ribbit" placeholder="Type something..." />
+    <button class="froggy" onclick="inputMessage()">Get input value</button>
+    <div class="woof">Another empty div</div>
+    <input class="doggy" placeholder="type something.." />
+    <button onclick="changeDivContent()">
+      Change div content based on input
+    </button>
+    <div class="axolotl">Waiting for result...</div>
+    <input class="meanie" placeholder="Type a number" />
+    <button class="cheese" onclick="checkNumberValue()">
+      Check if the number is larger than 100
+    </button>
+    <script>
+      function popUpHello() {
+        alert('hello');
+      }
+      function popupNewMessage(message) {
+        alert(message);
+      }
+      function contentDiv() {
+        let contentDivButton = document.querySelector('.cow');
+        contentDivButton.innerHTML = 'My name is Abc';
+      }
+      function inputMessage() {
+        let input = document.querySelector('.ribbit');
+        let inputValue = input.value;
+        alert(inputValue);
+      }
+      function changeDivContent() {
+        let input = document.querySelector('.doggy');
+        let inputValue = input.value;
+        let myDiv = document.querySelector('.woof');
+        myDiv.innerHTML = inputValue;
+      }
+
+      function checkNumberValue() {
+        let input = document.querySelector('.meanie');
+        let inputValue = input.value;
+        let result = document.querySelector('.axolotl');
+
+        if (inputValue > 100) {
+          result.innerHTML = `The ${inputValue} is greater than 100`;
+        } else if (inputValue < 100) {
+          result.innerHTML = `The ${inputValue} is less than 100`;
+        } else {
+          result.innerHTML = `The ${inputValue} is 100`;
+        }
+      }
+    </script>
+  </body>
+</html>
