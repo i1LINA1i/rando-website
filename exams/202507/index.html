@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border: solid 2px black;
+        margin: 10px;
+      }
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="alertText()">Show Popup</button>
+    <div class="box"></div>
+    <button onclick="changeColor('red')">red</button>
+    <button onclick="changeColor('blue')">blue</button>
+    <button onclick="changeColor('yellow')">yellow</button>
+    <input class="axo" type="number" min="0" max="10" />
+    <button onclick="gradeChecker()">Check Result</button>
+    <div class="result">Grade Result</div>
+    <button onclick="printNumbers()">Print Numbers</button>
+
+    <script>
+      function alertText() {
+        alert('Hello world');
+      }
+      let previousColor;
+      function changeColor(color) {
+        let box = document.querySelector('.box');
+
+        box.classList.remove(previousColor);
+        box.classList.add(color);
+        previousColor = color;
+      }
+      function gradeChecker() {
+        let result = document.querySelector('.result');
+        let input = document.querySelector('.axo');
+        let inputValue = input.value;
+
+        if (inputValue >= 10) {
+          result.innerHTML = 'Fantastic';
+        } else if (inputValue >= 7 && inputValue <= 9) {
+          result.innerHTML = 'great job';
+        } else if (inputValue >= 4 && inputValue <= 6) {
+          result.innerHTML = 'nice try';
+        } else if (inputValue >= 1 && inputValue <= 3) {
+          result.innerHTML = 'bad';
+        } else {
+          result.innerHTML = 'I give up';
+        }
+      }
+
+      function printNumbers() {
+        let numbers = [
+          53, 1, 100, 99, 29292, 3210, -20, -50, 999, 10101, 79799798,
+        ];
+
+        for (let i = 0; i < numbers.length; i++) {
+          console.log(`Number ${i + 1} is ${numbers[i]}`);
+        }
+      }
+    </script>
+  </body>
+</html>

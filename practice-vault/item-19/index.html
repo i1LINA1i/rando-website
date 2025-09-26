@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      input {
+        padding: 20px;
+        border-radius: 5px;
+      }
+      button {
+        padding: 20px;
+        margin-left: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input class="input" />
+      <button onclick="changeInputText()">
+        Click me to change the input value
+      </button>
+    </div>
+    <script>
+      function changeInputText() {
+        let input = document.querySelector('.input');
+        input.value = 'A button is clicked';
+      }
+    </script>
+  </body>
+</html>

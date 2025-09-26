@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .normal {
+        width: 100px;
+        padding: 10px;
+      }
+      .zoom-in {
+        width: 150px;
+      }
+      .zoom-out {
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="buttonTextChanger()" class="button">Click Me</button>
+    <input class="input" /> <button onclick="textInputEcho()">Echo</button>
+    <div class="text"></div>
+    <img
+      class="normal"
+      src="https://i.pinimg.com/videos/thumbnails/originals/34/b9/04/34b904216e0739ef539fb95b5a8ae500.0000000.jpg"
+    />
+    <button>Zoom In</button> <button>Zoom Out</button>
+    <script>
+      function buttonTextChanger() {
+        let button = document.querySelector('.button');
+        button.innerHTML = 'Clicked';
+      }
+      function textInputEcho() {
+        let input = document.querySelector('.input');
+        let inputValue = input.value;
+        let text = document.querySelector('.text');
+        text.innerHTML = inputValue;
+      }
+      function zoomIn() {
+        let image = document.querySelector('.normal');
+        if (image.classList.contains('.zoom-out')) {
+          image.classList.remove('.zoom-out');
+          image.classList.add('.normal');
+        } else if (image.classList.contains('.normal')) {
+          image.classList.remove('.normal');
+          image.classList.add('.zoom-in');
+        }
+      }
+    </script>
+  </body>
+</html>

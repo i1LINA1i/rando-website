@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .button-1 {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="button-1" onclick="alertText()">
+        Click me to open an alert!
+      </button>
+    </div>
+    <script>
+      function alertText() {
+        alert('button clicked');
+      }
+    </script>
+  </body>
+</html>

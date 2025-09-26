@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        margin: 100px;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+      }
+      input {
+        height: 35px;
+        width: 250px;
+        border: none;
+        text-align: right;
+        font-size: 35px;
+      }
+      .btn {
+        width: 100px;
+        height: 50px;
+        margin: 3px 1px;
+        border-radius: 5px;
+        border: none;
+        background-color: #dbdce0;
+        color: #4d4e52;
+      }
+
+      .btn:hover {
+        background-color: #4d4e52;
+        color: white;
+      }
+
+      .btn-del {
+        background-color: red;
+        color: #dbdce0;
+      }
+      .btn-del:hover {
+        background-color: rgb(189, 37, 37);
+        color: #dbdce0;
+      }
+      .btn-equal {
+        background-color: #4286f4;
+        color: #dbdce0;
+      }
+      .btn-equal:hover {
+        background-color: #2c569a;
+        color: #dbdce0;
+      }
+      .equation {
+        background-color: #ffffff;
+        width: 200px;
+        text-align: right;
+        height: 25px;
+      }
+      .calculator-screen {
+        display: flex;
+        height: 75px;
+        width: 420px;
+        border: 1px black solid;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+      }
+      .history {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      .history ul {
+        display: none;
+        border: 1px solid black;
+        margin-top: 10px;
+        padding: 5px;
+        min-width: 190px;
+        background-color: white;
+        list-style: none;
+      }
+      .history li {
+        padding: 10px;
+      }
+      .history li:hover {
+        background-color: lightgray;
+        cursor: pointer;
+      }
+      .show-history {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator-screen">
+        <div class="history">
+          <button onclick="toggleHistory()">history</button>
+          <ul>
+            <li>huijuijui</li>
+            <li>hvw dns</li>
+          </ul>
+        </div>
+        <div class="equation"></div>
+        <input class="input-1" />
+      </div>
+
+      <div class="row-1">
+        <button class="btn" onclick="onCalculatorButtonClick('(')">(</button>
+        <button class="btn" onclick="onCalculatorButtonClick(')')">)</button>
+        <button class="btn btn-del" onclick="onCalculatorButtonClick('DEL')">
+          DEL
+        </button>
+        <button class="btn" onclick="onCalculatorButtonClick('AC')">AC</button>
+      </div>
+      <div>
+        <button class="btn" onclick="onCalculatorButtonClick('7')">7</button>
+        <button class="btn" onclick="onCalculatorButtonClick('8')">8</button>
+        <button class="btn" onclick="onCalculatorButtonClick('9')">9</button>
+        <button class="btn" onclick="onCalculatorButtonClick('/')">/</button>
+      </div>
+      <div>
+        <button class="btn" onclick="onCalculatorButtonClick('4')">4</button>
+        <button class="btn" onclick="onCalculatorButtonClick('5')">5</button>
+        <button class="btn" onclick="onCalculatorButtonClick('6')">6</button>
+        <button class="btn" onclick="onCalculatorButtonClick('*')">*</button>
+      </div>
+      <div>
+        <button class="btn" onclick="onCalculatorButtonClick('1')">1</button>
+        <button class="btn" onclick="onCalculatorButtonClick('2')">2</button>
+        <button class="btn" onclick="onCalculatorButtonClick('3')">3</button>
+        <button class="btn" onclick="onCalculatorButtonClick('-')">-</button>
+      </div>
+      <div>
+        <button class="btn" onclick="onCalculatorButtonClick('0')">0</button>
+        <button class="btn" onclick="onCalculatorButtonClick('.')">.</button>
+        <button class="btn btn-equal" onclick="onCalculatorButtonClick('=')">
+          =
+        </button>
+        <button class="btn" onclick="onCalculatorButtonClick('+')">+</button>
+      </div>
+    </div>
+    <script>
+      function onCalculatorButtonClick(action) {
+        let input = document.querySelector('.input-1');
+        let espression = document.querySelector('.equation');
+        if (action === 'AC') {
+          input.value = '';
+        } else if (action === '=') {
+          espression.innerHTML = input.value;
+          input.value = eval(input.value);
+        } else if (action === 'DEL') {
+          input.value = input.value.slice(0, -1);
+        } else {
+          input.value = input.value + action;
+        }
+      }
+      function toggleHistory() {
+        let history = document.querySelector('.history');
+        history.classList.toggle('.show-history');
+      }
+    </script>
+  </body>
+</html>

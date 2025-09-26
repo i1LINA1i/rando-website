@@ -1,46 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
- <head>
-   <title>HTML Template</title>
-   <style>
-img {
-  width: 250px;
-  height: 250px;
-}
-.zoom-in{
-  width: 350px;
-  height: 350px;
-}
-.zoom-out{
-  width: 150px;
-  height: 150px;
-}
-   </style>
- </head>
- <body>
-  <button class="button" onclick="textButtonChanger()"> Click Me</button>
-  <input/> <button onclick="displayText()"> echo</button> <p class="text"></p>
-  <img class="zoom-in" src="https://images.unsplash.com/photo-1565573349860-cbf26ef3f40f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBpbmslMjBmbG93ZXJ8ZW58MHx8MHx8fDA%3D"/>
- <button>zoom in </button><button>zoom out</button>
- <script>
-    function textButtonChanger() {
-   let button = document.querySelector('.button')
-   button.innerHTML= 'Clicked'
-    }
-    function displayText(){
-      let input = document.querySelector('input')
-      let inputValue = input.value
-      let text = document.querySelector('.text')
-      text.innerHTML = `${inputValue}`
-    }
-    function zoomIn() {
-      let image = document.querySelector('img')
-      if (image.classList.contains('.zoom-in')) {
-        image.classList.remove('zoom-in')
-        image.classList.add('zoom-out')
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .default {
+        width: 250px;
       }
-    }
-    
- </script>
- </body>
+      .zoom-in {
+        width: 350px;
+      }
+      .zoom-out {
+        width: 150px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .red {
+        background-color: red;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .violet {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button" onclick="textButtonChanger()">Click Me</button>
+    <input /> <button onclick="displayText()">echo</button>
+    <p class="text"></p>
+    <img
+      class="img default"
+      src="https://images.unsplash.com/photo-1565573349860-cbf26ef3f40f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBpbmslMjBmbG93ZXJ8ZW58MHx8MHx8fDA%3D"
+    />
+    <button onclick="zoomIn()">zoom in</button
+    ><button onclick="zoomOut()">zoom out</button>
+    <div class="box"></div>
+    <button onclick="changeColor('red')">red</button>
+    <button onclick="changeColor('orange')">orange</button>
+    <button onclick="changeColor('yellow')">yellow</button>
+    <button onclick="changeColor('green')">green</button>
+    <button onclick="changeColor('blue')">blue</button>
+    <button onclick="changeColor('violet')">purple</button>
+
+    <script>
+      function textButtonChanger() {
+        let button = document.querySelector('.button');
+        button.innerHTML = 'Clicked';
+      }
+      function displayText() {
+        let input = document.querySelector('input');
+        let inputValue = input.value;
+        let text = document.querySelector('.text');
+        text.innerHTML = `${inputValue}`;
+      }
+      function zoomIn() {
+        let image = document.querySelector('.img');
+
+        if (image.classList.contains('zoom-out')) {
+          image.classList.remove('zoom-out');
+          image.classList.add('default');
+        } else {
+          image.classList.remove('default');
+          image.classList.add('zoom-in');
+        }
+      }
+      function zoomOut() {
+        let image = document.querySelector('.img');
+        if (image.classList.contains('zoom-in')) {
+          image.classList.remove('zoom-in');
+          image.classList.add('default');
+        } else {
+          image.classList.remove('default');
+          image.classList.add('zoom-out');
+        }
+      }
+      let previousColor;
+      function changeColor(color) {
+        let box = document.querySelector('.box');
+        box.classList.remove(previousColor);
+        box.classList.add(color);
+        previousColor = color;
+      }
+    </script>
+  </body>
 </html>

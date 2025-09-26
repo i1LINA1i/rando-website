@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+  </head>
+  <body>
+    <button onclick="alertMessage()">click me</button>
+    <input class="input-1" />
+    <button onclick="numberChecker()">button</button>
+    <input class="input-2" type="number" />
+    <button onclick="arrayColors()">button</button>
+    <button onclick="makeAList()">click me</button>
+    <div class="list"></div>
+    <button onclick="numberSum()">sum</button>
+    <div class="total"></div>
+    <button onclick="getLargestNumber()">Get the largest number</button>
+
+    <script>
+      function alertMessage() {
+        let input = document.querySelector('.input-1');
+        let inputValue = input.value;
+        alert(inputValue);
+      }
+      function numberChecker() {
+        let input = document.querySelector('.input-2');
+        let inputValue = input.value;
+        if (inputValue < 10) {
+          alert('Number is less than 10');
+        } else if (inputValue > 10) {
+          alert('Number is greater than 10');
+        } else {
+          alert('Number is equal to 10');
+        }
+      }
+      const colors = ['red', 'blue', 'green'];
+
+      function arrayColors() {
+        let lastIndex = colors.length - 1;
+        let lastColor = colors[lastIndex];
+        alert(lastColor);
+      }
+      const favorites = ['books', 'games', 'movies'];
+
+      function makeAList() {
+        let list = document.querySelector('.list');
+        list.innerHTML = `
+        <ul>
+             <li>${favorites[0]}</li>
+             <li>${favorites[1]}</li>
+             <li>${favorites[2]}</li>
+       </ul>`;
+      }
+      let numbers = [53, 1, 100];
+      function numberSum() {
+        let total = document.querySelector('.total');
+        let totalSum = numbers[0] + numbers[1] + numbers[2];
+        total.innerHTML = totalSum;
+      }
+      let randomNumbers = [53, 1, 101, 99, 100];
+      function getLargestNumber() {
+        let currentLargestNumber = randomNumbers[0];
+        if (currentLargestNumber < randomNumbers[1]) {
+          currentLargestNumber = randomNumbers[1];
+        }
+        if (currentLargestNumber < randomNumbers[2]) {
+          currentLargestNumber = randomNumbers[2];
+        }
+        if (currentLargestNumber < randomNumbers[3]) {
+          currentLargestNumber = randomNumbers[3];
+        }
+        if (currentLargestNumber < randomNumbers[4]) {
+          currentLargestNumber = randomNumbers[4];
+        }
+        alert(currentLargestNumber);
+      }
+    </script>
+  </body>
+</html>

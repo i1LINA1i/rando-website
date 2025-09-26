@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        background-color: #f4f4f4;
+        font-size: 25px;
+      }
+      .container {
+        margin: 50px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      input {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 10px;
+      }
+      button {
+        padding: 10px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>Enter Your Names</div>
+      <input class="input-1" placeholder="First Name" />
+      <input class="input-2" placeholder="Last Name" />
+      <button onclick="showFullName()">Show Full Name</button>
+      <div class="text"></div>
+      <script>
+        function showFullName() {
+          let input1 = document.querySelector('.input-1');
+          let input1Value = input1.value;
+          let input2 = document.querySelector('.input-2');
+          let input2Value = input2.value;
+          let text = document.querySelector('.text');
+          text.innerHTML = `Full name: ${input1Value} ${input2Value}`;
+        }
+      </script>
+    </div>
+  </body>
+</html>

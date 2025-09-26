@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .container {
+        margin: 50px;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        flex-direction: column;
+      }
+      .buttons button {
+        padding: 15px;
+        border: solid 3px;
+        margin: 10px;
+        color: black;
+        border-radius: 10px;
+      }
+
+      .box {
+        width: 250px;
+        height: 250px;
+        background-color: rgb(234, 229, 229);
+      }
+
+      .red {
+        background-color: red;
+      }
+      .big {
+        width: 350px;
+        height: 350px;
+      }
+      .invisible {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="buttons">
+        <button class="button-1" onclick="toRed()">
+          Change the box background to "red"
+        </button>
+        <button class="button-2" onclick="toBig()">
+          Make the box become bigger
+        </button>
+        <button class="button-3" onclick="toInvible()">Hide the box</button>
+      </div>
+      <div class="box"></div>
+    </div>
+    <script>
+      function toRed() {
+        let box = document.querySelector('.box');
+        let button = document.querySelector('.button-1');
+        if (box.classList.contains('red')) {
+          box.classList.remove('red');
+          button.innerHTML = 'Change the box background to red';
+        } else {
+          box.classList.add('red');
+          button.innerHTML = 'Change the box background back to default';
+        }
+      }
+      function toBig() {
+        let box = document.querySelector('.box');
+        if (box.classList.contains('big')) {
+          box.classList.remove('big');
+        } else {
+          box.classList.add('big');
+        }
+      }
+      function toInvible() {
+        let box = document.querySelector('.box');
+        if (box.classList.contains('invisible')) {
+          box.classList.remove('invisible');
+        } else {
+          box.classList.add('invisible');
+        }
+      }
+    </script>
+  </body>
+</html>

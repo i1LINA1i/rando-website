@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+  </head>
+  <body>
+    <button onclick="countFromZeroToTen()">count from 0 to 10</button>
+    <button onclick="numberSum()">total number</button>
+    <div class="result"></div>
+    <button>Find the largest number</button>
+    <div> </div>
+    <script>
+      for (let i = 0; i < 9; i++) {
+        console.log('I am Lina');
+      }
+      function countFromZeroToTen() {
+        for (let i = 0; i <= 10; i++) {
+          console.log(i);
+        }
+      }
+
+      function numberSum() {
+        let numbers = [7, 0, 209, 273, 920, 394, 398, 238, 928, 984];
+        let result = document.querySelector('.result');
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          sum = sum + numbers[i];
+        }
+        result.innerHTML = `Total sum is ${sum}`;
+      }
+    </script>
+  </body>
+</html>
