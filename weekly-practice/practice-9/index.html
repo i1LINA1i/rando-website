@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+  </head>
+  <body>
+    <button onclick="printNumbers()">Print from 0-1000</button>
+    <ul class="list"></ul>
+    <input />
+    <button>search</button>
+    <input class="filter-input" type="number" />
+    <button onclick="arrayFilter()">filter</button>
+    <div class="filter-results"></div>
+    <ul class="filter-list"></ul>
+    <script>
+      function printNumbers() {
+        let list = document.querySelector('.list');
+        let content = '';
+        for (let i = 0; i <= 1000; i++) {
+          console.log(i);
+          content = content + `<li>${i}</li>`;
+        }
+        list.innerHTML = content;
+      }
+      function arrayElementSearch() {
+        let fruit = ['apple', 'banana', 'cherry'];
+        let input = document.querySelector('.input');
+        let inputValue = input.value;
+        let hasitemFound = false;
+
+        for (let i = 0; i < items.length; i++) {}
+      }
+      function arrayFilter() {
+        let items = ['cat', 'dog', 'elephant', 'bird', 'fish'];
+        let inputValue = document.querySelector('.filter-input').value;
+        let list = document.querySelector(filter - list);
+        let listHTML = '';
+        for (let i = 0; i < items.length; i++) {
+          let currentItem = items[i];
+          let currentItemLength = currentItem.length;
+
+          if (currentItemLength > inputValue) {
+            console.log('filtered item', currentItem);
+            listHTML = list + `<li>`currentItem`</li>`
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+  </head>
+  <body>
+    <button onclick="tellMeMore(jackvo)">grade</button>
+
+    <script>
+      let jackvo = {
+        name: 'Jack',
+        age: 40,
+      };
+
+      function tellMeMore(person) {
+        console.log(`My name is ${person.name}`);
+        if (person.age < 18) {
+          console.log('I am unemployed');
+        } else if (person.age > 18 && person.age < 65) {
+          console.log('I am employed');
+        } else {
+          console.log('I am retired');
+        }
+      }
+    </script>
+  </body>
+</html>
